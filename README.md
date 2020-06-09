@@ -1,6 +1,8 @@
 # library-api
 This project contains an API for a library, which is a service that keeps records of students borrowing books.
+
 In this service users can also create, read update and delete books, students and borrows.
+
 Requirements for this project can be found in requirements.txt file.
 
 ## Table of Contents
@@ -12,3 +14,15 @@ Requirements for this project can be found in requirements.txt file.
 1. [Getting Started](#getting-started)
 
 1. [REST Endpoints](#rest-endpoints)
+
+## Tools
+
+For running it is required you to have:
+
+* [Python](https://www.python.org/)
+
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) as your build tool
+
+* You can choose the IDE of your preference.
+
+* [PostgreSQL](https://www.postgresql.org/) or any other database application
