@@ -13,6 +13,8 @@ Requirements for this project can be found in requirements.txt file.
 
 1. [Getting Started](#getting-started)
 
+1. [Database](#database)
+
 1. [REST Endpoints](#rest-endpoints)
 
 ## Tools
@@ -73,4 +75,35 @@ https://github.com/abdulla98/library-api.git
 
 ```
 
+Second, configure the [database](#database).
 
+## Database
+
+1. Create a database.
+
+1. Add the credentials of the database to `/library-api/api/model/Model.py`.
+
+The default credentials are:
+
+```
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost:5432/library"
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+```
+
+After you configure the database the next thing you should do is to open your IDE and install all the listed dependecies. If everything goes fine, you should be able to run the project and see a page [here](http://127.0.0.1:5000/).
+
+
+
+## REST Endpoints
+
+### Student Endpoints
+
+### Book Endpoints
+
+### Author Endpoints
+
+### Borrow Endpoints
