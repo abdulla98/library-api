@@ -100,10 +100,107 @@ After you configure the database the next thing you should do is to open your ID
 
 ## REST Endpoints
 
+### Book Endpoints
+
+Insert a new book
+* URL ```localhost:5000/book/save```, METHOD = POST
+```
+{
+	"book_authorId": 1,
+  "name": "Don Quixote",
+  "pagecount": 863
+}
+```
+
+Get all books
+* URL ```localhost:5000/books```, METHOD = GET
+
+Get book by ID
+* URL ```localhost:5000/book/{id}```, METHOD = GET
+
+Delete a book
+* URL ```localhost:5000/book/delete/{id}```, METHOD = DELETE
+
+Update a book
+* URL ```localhost:5000/book/update/{id}```, METHOD = PUT
+
 ### Student Endpoints
 
-### Book Endpoints
+Insert a new student
+* URL ```localhost:5000/student/save```, METHOT = POST
+```
+{
+	"name": "John Doe",
+  "birthdate": "25/06/1998",
+  "gender": "Male",
+  "student_class": "CST"
+}
+```
+
+Get all students
+* URL ```localhost:5000/students```, METHOD = GET
+
+Get student by ID
+* URL ```localhost:5000/student/{id}```, METHOD = GET
+
+Delete a student
+* URL ```localhost:5000/student/delete/{id}```, METHOD = DELETE
+
+Update a student
+* URL ```localhost:5000/student/update/{id}```, METHOD = PUT
+
+
+### Borrow Endpoints
+
+Insert a new borrow
+* URL ```localhost:5000/borrow/save```, METHOT = POST
+```
+{
+	"book_id": 1,
+  "student_id": 1,
+  "taken_date": 10/06/2020,
+  "brought_date": 20/06/2020
+}
+```
+
+Get all borrows
+* URL ```localhost:5000/borrows```, METHOD = GET
+
+Get borrow by ID
+* URL ```localhost:5000/borrow/{id}```, METHOD = GET
+
+Delete a borrow
+* URL ```localhost:5000/borrow/delete/{id}```, METHOD = DELETE
+
+Update a borrow
+* URL ```localhost:5000/borrow/update/{id}```, METHOD = PUT
+```
+{
+  "taken_date": 13/07/2020,
+  "brought_date": 22/07/2020
+}
+```
+
 
 ### Author Endpoints
 
-### Borrow Endpoints
+Insert a new author
+* URL ```localhost:5000/author/save```, METHOT = POST
+```
+{
+	"name": "Miguel Servantes"
+}
+```
+
+Get all authors
+* URL ```localhost:5000/authors```, METHOD = GET
+
+Get an author by ID
+* URL ```localhost:5000/author/{id}```, METHOD = GET
+
+Delete an author
+* URL ```localhost:5000/author/delete/{id}```, METHOD = DELETE
+
+Update an author
+* URL ```localhost:5000/author/update/{id}```, METHOD = PUT
+
