@@ -86,12 +86,10 @@ Second, configure the [database](#database).
 The default credentials are:
 
 ```
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost:5432/library"
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
 ```
 
 After you configure the database the next thing you should do is to open your IDE and install all the listed dependecies. If everything goes fine, you should be able to run the project and see a page [here](http://127.0.0.1:5000/).
@@ -106,7 +104,7 @@ Insert a new book
 * URL ```localhost:5000/book/save```, METHOD = POST
 ```
 {
-	"book_authorId": 1,
+  "book_authorId": 1,
   "name": "Don Quixote",
   "pagecount": 863
 }
